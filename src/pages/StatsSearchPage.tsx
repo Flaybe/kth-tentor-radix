@@ -79,26 +79,35 @@ export default function StatsSearchPage() {
 
   const aggregate = useMemo(() => {
     const totals: Record<string, number> = {
-      U: 0,
-      G: 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
+      F: 0,
+      Fx: 0,
+      E: 0,
+      D: 0,
+      C: 0,
+      B: 0,
+      A: 0,
+      P: 0,
     };
     sorted.forEach((e) => {
       const s: any = e.statistics || {};
-      totals.U += Number(s.U || 0);
-      totals.G += Number(s.G || 0);
-      totals["3"] += Number(s["3"] || 0);
-      totals["4"] += Number(s["4"] || 0);
-      totals["5"] += Number(s["5"] || 0);
+      totals.F += Number(s.F || 0);
+      totals.Fx += Number(s.Fx || 0);
+      totals.E += Number(s.E || 0);
+      totals.D += Number(s.D || 0);
+      totals.C += Number(s.C || 0);
+      totals.B += Number(s.B || 0);
+      totals.A += Number(s.A || 0);
+      totals.P += Number(s.P || 0);
     });
     const entriesRaw = [
-      { key: "U", label: "U", value: totals.U, color: c.destructive },
-      { key: "G", label: "G", value: totals.G, color: c.chart2 },
-      { key: "3", label: "3", value: totals["3"], color: c.chart4 },
-      { key: "4", label: "4", value: totals["4"], color: c.chart3 },
-      { key: "5", label: "5", value: totals["5"], color: c.chart1 },
+      { key: "F", label: "F", value: totals.F, color: c.chart1 },
+      { key: "Fx", label: "Fx", value: totals.Fx, color: c.chart1 },
+      { key: "E", label: "E", value: totals.E, color: c.chart2 },
+      { key: "D", label: "D", value: totals.D, color: c.chart3 },
+      { key: "C", label: "C", value: totals.C, color: c.chart4 },
+      { key: "B", label: "B", value: totals.B, color: c.chart5 },
+      { key: "A", label: "A", value: totals.A, color: c.chart5 },
+      { key: "P", label: "P", value: totals.P, color: c.chart2 },
     ];
     const entries = entriesRaw.filter((d) => d.value > 0);
     const grand = entries.reduce((s, d) => s + d.value, 0);

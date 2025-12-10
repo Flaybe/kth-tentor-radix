@@ -10,11 +10,14 @@ export interface CourseExam {
   exam_name: string;
   has_solution: boolean;
   statistics: {
-    "3"?: number;
-    "4"?: number;
-    "5"?: number;
-    U?: number;
-    G?: number;
+    A?: number;
+    B?: number;
+    C?: number;
+    D?: number;
+    E?: number;
+    F?: number;
+    Fx?: number;
+    P?: number;
   };
   pass_rate: number;
 }
@@ -32,6 +35,39 @@ export const useCourseExams = (courseCode: string) => {
     fetcher,
     { revalidateOnFocus: false }
   );
+
+  if (courseCode === "SF1624") {
+    return {
+      courseData: {
+        course_code: "SF1624",
+        course_name_swe: "Algebra och geometri",
+        course_name_eng: "Algebra and Geometry",
+        exams: [
+          {
+            id: 12345,
+            course_code: "SF1624",
+            exam_date: "2024-03-15",
+            pdf_url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+            exam_name: "Tenta 2024-03-15",
+            has_solution: true,
+            statistics: {
+              A: 10,
+              B: 15,
+              C: 20,
+              D: 15,
+              E: 10,
+              F: 5,
+              Fx: 2,
+              P: 0,
+            },
+            pass_rate: 91.5,
+          },
+        ],
+      } as CourseData,
+      isLoading: false,
+      isError: null,
+    };
+  }
 
   return {
     courseData: data as CourseData | undefined,

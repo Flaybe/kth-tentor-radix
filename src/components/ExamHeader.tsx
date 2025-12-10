@@ -253,11 +253,14 @@ const ExamHeader: FC<Props> = ({ exams, setIsChatOpen, onToggleChat }) => {
         {selectedExam && selectedExam.statistics ? (
           <ExamStatsDialog
             statistics={{
-              "3": selectedExam.statistics["3"] || 0,
-              "4": selectedExam.statistics["4"] || 0,
-              "5": selectedExam.statistics["5"] || 0,
-              U: selectedExam.statistics.U || 0,
-              G: selectedExam.statistics.G || 0,
+              A: selectedExam.statistics.A || 0,
+              B: selectedExam.statistics.B || 0,
+              C: selectedExam.statistics.C || 0,
+              D: selectedExam.statistics.D || 0,
+              E: selectedExam.statistics.E || 0,
+              F: selectedExam.statistics.F || 0,
+              Fx: selectedExam.statistics.Fx || 0,
+              P: selectedExam.statistics.P || 0,
               pass_rate: selectedExam.pass_rate,
             }}
             date={selectedExam.exam_date}

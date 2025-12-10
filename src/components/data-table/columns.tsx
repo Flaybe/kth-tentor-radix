@@ -75,12 +75,14 @@ export const getColumns = (
       return (
         <ExamStatsDialog
           statistics={{
-            "3": row.original.statistics["3"] || 0,
-            "4": row.original.statistics["4"] || 0,
-            "5": row.original.statistics["5"] || 0,
-            VG: row.original.statistics["VG"] || 0,
-            U: row.original.statistics.U || 0,
-            G: row.original.statistics.G || 0,
+            A: row.original.statistics.A || 0,
+            B: row.original.statistics.B || 0,
+            C: row.original.statistics.C || 0,
+            D: row.original.statistics.D || 0,
+            E: row.original.statistics.E || 0,
+            F: row.original.statistics.F || 0,
+            Fx: row.original.statistics.Fx || 0,
+            P: row.original.statistics.P || 0,
             pass_rate: passedCount,
           }}
           date={row.original.exam_date}

@@ -3,15 +3,18 @@ export type Exam = {
   course_code: string;
   exam_date: string;
   pdf_url: string;
+  solution_url?: string;
   exam_name: string;
   has_solution: boolean;
   statistics: {
-    "3"?: number;
-    "4"?: number;
-    "5"?: number;
-    VG?: number;
-    U?: number;
-    G?: number;
+    A?: number;
+    B?: number;
+    C?: number;
+    D?: number;
+    E?: number;
+    F?: number;
+    Fx?: number;
+    P?: number;
   };
   pass_rate?: number;
 };

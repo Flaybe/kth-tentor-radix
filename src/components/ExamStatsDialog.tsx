@@ -19,22 +19,26 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const gradeChartConfig = {
-  U: { label: "U", color: "var(--chart-1)" },
-  G: { label: "G", color: "var(--chart-2)" },
-  VG: { label: "VG", color: "var(--chart-5)" },
-  "3": { label: "3", color: "var(--chart-3)" },
-  "4": { label: "4", color: "var(--chart-4)" },
-  "5": { label: "5", color: "var(--chart-5)" },
+  F: { label: "F", color: "var(--chart-1)" },
+  Fx: { label: "Fx", color: "var(--chart-1)" },
+  E: { label: "E", color: "var(--chart-2)" },
+  D: { label: "D", color: "var(--chart-3)" },
+  C: { label: "C", color: "var(--chart-4)" },
+  B: { label: "B", color: "var(--chart-5)" },
+  A: { label: "A", color: "var(--chart-5)" },
+  P: { label: "P", color: "var(--chart-2)" },
 };
 
 interface ExamStatsDialogProps {
   statistics: {
-    U?: number;
-    G?: number;
-    "3"?: number;
-    "4"?: number;
-    "5"?: number;
-    VG?: number;
+    A?: number;
+    B?: number;
+    C?: number;
+    D?: number;
+    E?: number;
+    F?: number;
+    Fx?: number;
+    P?: number;
     pass_rate?: number;
   };
   trigger: React.ReactNode;
@@ -47,25 +51,26 @@ export const ExamStatsDialog: React.FC<ExamStatsDialogProps> = ({
   date,
 }) => {
   const total =
-    (statistics.U || 0) +
-    (statistics.G || 0) +
-    (statistics["VG"] || 0) +
-    (statistics["3"] || 0) +
-    (statistics["4"] || 0) +
-    (statistics["5"] || 0);
+    (statistics.F || 0) +
+    (statistics.Fx || 0) +
+    (statistics.E || 0) +
+    (statistics.D || 0) +
+    (statistics.C || 0) +
+    (statistics.B || 0) +
+    (statistics.A || 0) +
+    (statistics.P || 0);
 
-  const passRate =
-    total > 0
-      ? (((statistics.G || 0) +
-          (statistics["VG"] || 0) +
-          (statistics["3"] || 0) +
-          (statistics["4"] || 0) +
-          (statistics["5"] || 0)) /
-          total) *
-        100
-      : 0;
+  const passed =
+    (statistics.E || 0) +
+    (statistics.D || 0) +
+    (statistics.C || 0) +
+    (statistics.B || 0) +
+    (statistics.A || 0) +
+    (statistics.P || 0);
 
-  const chartData = ["U", "G", "VG", "3", "4", "5"]
+  const passRate = total > 0 ? (passed / total) * 100 : 0;
+
+  const chartData = ["F", "Fx", "E", "D", "C", "B", "A", "P"]
     .filter((grade) => (statistics[grade as keyof typeof statistics] || 0) > 0)
     .map((grade) => ({
       grade,
