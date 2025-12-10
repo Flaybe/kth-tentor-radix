@@ -88,15 +88,15 @@ const UploadExamPage = () => {
   const { t } = useTranslation();
 
   useMetadata({
-    title: `LiU Tentor | ${t("uploadTitle")}`,
+    title: `KTH Tentor | ${t("uploadTitle")}`,
     description: t("uploadDescription"),
     keywords:
-      "ladda upp, tenta, tentamen, Linköpings Universitet, LiU, upload, exam",
-    ogTitle: `LiU Tentor | ${t("uploadTitle")}`,
+      "ladda upp, tenta, tentamen, KTH, KTH, upload, exam",
+    ogTitle: `KTH Tentor | ${t("uploadTitle")}`,
     ogDescription: t("uploadDescription"),
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${t("uploadTitle")}`,
+    twitterTitle: `KTH Tentor | ${t("uploadTitle")}`,
     twitterDescription: t("uploadDescription"),
     robots: "index, follow",
   });
@@ -264,11 +264,10 @@ const UploadExamPage = () => {
 
         <div
           {...getRootProps()}
-          className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${
-            isDragActive
-              ? "border-primary bg-primary/5 scale-105"
-              : "border-muted hover:border-primary/50"
-          } ${loading ? "opacity-50 pointer-events-none" : ""}`}
+          className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${isDragActive
+            ? "border-primary bg-primary/5 scale-105"
+            : "border-muted hover:border-primary/50"
+            } ${loading ? "opacity-50 pointer-events-none" : ""}`}
         >
           <input {...getInputProps()} disabled={loading} />
           <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground">
@@ -363,9 +362,8 @@ const UploadExamPage = () => {
                   : "Thank you! Your exam has been uploaded and will be reviewed before being published."
                 : language === "sv"
                   ? `Något gick fel. ${errorMessage || "Försök igen."}`
-                  : `Something went wrong. ${
-                      errorMessage || "Please try again."
-                    }`}
+                  : `Something went wrong. ${errorMessage || "Please try again."
+                  }`}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

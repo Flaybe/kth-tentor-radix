@@ -19,12 +19,12 @@ export default function HomePage() {
     title: `${t("homeTitle")}`,
     description: t("homeDescription"),
     keywords:
-      "tentaarkiv, tenta, tentamen, facit, Linköpings Universitet, LiU, gamla tentor, exam archive",
-    ogTitle: `LiU Tentor | ${t("homeTitle")}`,
+      "tentaarkiv, tenta, tentamen, facit, KTH, KTH, gamla tentor, exam archive",
+    ogTitle: `KTH Tentor | ${t("homeTitle")}`,
     ogDescription: t("homeDescription"),
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${t("homeTitle")}`,
+    twitterTitle: `KTH Tentor | ${t("homeTitle")}`,
     twitterDescription: t("homeDescription"),
     robots: "index, follow",
   });
@@ -48,7 +48,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center space-y-2 mb-10">
             <div className="flex flex-row items-center justify-center space-x-2">
               <LogoIcon className="w-12 h-12 md:w-14 md:h-14 lg:w-20 lg:h-20" />
-              <h1 className="text-4xl lg:text-5xl font-semibold font-logo text-foreground/80 tracking-tight">
+              <h1 className="text-4xl lg:text-5xl font-semibold font-logo text-white tracking-tight">
                 {t("homeTitle")}
               </h1>
             </div>
@@ -56,11 +56,10 @@ export default function HomePage() {
 
           <div className="w-full max-w-[600px] flex flex-col items-center space-y-6 mb-20">
             <div
-              className={`w-full shadow-md dark:shadow-lg border border-foreground/20 ${
-                focusInput
-                  ? "border-primary ring-1 ring-primary"
-                  : "hover:border-foreground/40"
-              } bg-background/5 flex flex-row items-center justify-center dark:bg-foreground/5 rounded-full transition-all duration-200 text-sm text-foreground/80 outline-none`}
+              className={`w-full shadow-md dark:shadow-lg border border-foreground/20 ${focusInput
+                ? "border-primary ring-1 ring-primary"
+                : "hover:border-foreground/40"
+                } bg-background/5 flex flex-row items-center justify-center dark:bg-foreground/5 rounded-full transition-all duration-200 text-sm text-foreground/80 outline-none`}
             >
               <MainInput setFocusInput={setFocusInput} />
             </div>

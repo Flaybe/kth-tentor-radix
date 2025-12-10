@@ -1,4 +1,4 @@
-import { useTheme } from "@/context/ThemeContext";
+// import { useTheme } from "@/context/ThemeContext";
 
 interface LogoIconProps {
   className?: string;
@@ -11,19 +11,11 @@ export function LogoIcon({
   className,
   width,
   height,
-  isBlackAndWhite,
 }: LogoIconProps) {
-  const { effectiveTheme } = useTheme();
+  // const { effectiveTheme } = useTheme();
+  // const isDark = effectiveTheme === "dark";
 
-  const isDark = effectiveTheme === "dark";
-
-  const src = isBlackAndWhite
-    ? isDark
-      ? "/liutentorwhiterounded.svg"
-      : "/liutentorblackrounded.svg"
-    : isDark
-    ? "/liutentorroundeddark.svg"
-    : "/liutentorroundedlight.svg";
+  const src = "/KTH.Logo.png";
 
   return (
     <img

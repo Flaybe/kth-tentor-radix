@@ -118,7 +118,7 @@ export const AIIntroDialog: FC<AIIntroDialogProps> = ({ onGetStarted }) => {
               <LogoIcon className="w-12 h-12" />
               <div className="flex flex-col">
                 <DialogTitle className="text-xl font-semibold font-logo leading-tight">
-                  LiU Tentor
+                  KTH Tentor
                 </DialogTitle>
                 <span className="text-lg font-semibold text-muted-foreground leading-tight">
                   Chat

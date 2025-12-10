@@ -138,12 +138,12 @@ const updates: Update[] = [
     version: "1.0.0",
     date: "2024-10-01",
     title: {
-      sv: "Lansering av LiU Tentor",
-      en: "Launch of LiU Tentor",
+      sv: "Lansering av KTH Tentor",
+      en: "Launch of KTH Tentor",
     },
     description: {
-      sv: "Första versionen av LiU Tentor med grundläggande funktionalitet för att söka och visa tentamina",
-      en: "First version of LiU Tentor with basic functionality for searching and viewing exams",
+      sv: "Första versionen av KTH Tentor med grundläggande funktionalitet för att söka och visa tentamina",
+      en: "First version of KTH Tentor with basic functionality for searching and viewing exams",
     },
     features: {
       sv: [
@@ -171,17 +171,17 @@ export default function UpdatesPage() {
   const { language } = useLanguage();
 
   useMetadata({
-    title: `LiU Tentor | ${language === "sv" ? "Uppdateringar" : "Updates"}`,
+    title: `KTH Tentor | ${language === "sv" ? "Uppdateringar" : "Updates"}`,
     description:
       language === "sv"
-        ? "Se de senaste uppdateringarna och funktionerna på LiU Tentor"
-        : "See the latest updates and features on LiU Tentor",
-    keywords: "updates, changelog, new features, LiU Tentor",
-    ogTitle: `LiU Tentor | ${language === "sv" ? "Uppdateringar" : "Updates"}`,
+        ? "Se de senaste uppdateringarna och funktionerna på KTH Tentor"
+        : "See the latest updates and features on KTH Tentor",
+    keywords: "updates, changelog, new features, KTH Tentor",
+    ogTitle: `KTH Tentor | ${language === "sv" ? "Uppdateringar" : "Updates"}`,
     ogDescription:
       language === "sv"
-        ? "Se de senaste uppdateringarna och funktionerna på LiU Tentor"
-        : "See the latest updates and features on LiU Tentor",
+        ? "Se de senaste uppdateringarna och funktionerna på KTH Tentor"
+        : "See the latest updates and features on KTH Tentor",
     ogType: "website",
     twitterCard: "summary",
     robots: "index, follow",
@@ -197,8 +197,8 @@ export default function UpdatesPage() {
           </h1>
           <p className="text-base text-muted-foreground">
             {language === "sv"
-              ? "Följ med i utvecklingen av LiU Tentor och se vilka nya funktioner vi har lagt till"
-              : "Follow the development of LiU Tentor and see what new features we've added"}
+              ? "Följ med i utvecklingen av KTH Tentor och se vilka nya funktioner vi har lagt till"
+              : "Follow the development of KTH Tentor and see what new features we've added"}
           </p>
         </div>
 

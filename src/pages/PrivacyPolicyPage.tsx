@@ -10,15 +10,15 @@ const PrivacyPolicy: FC = () => {
   const { t } = useTranslation();
 
   useMetadata({
-    title: `LiU Tentor | ${t("privacyPolicyTitle")}`,
+    title: `KTH Tentor | ${t("privacyPolicyTitle")}`,
     description: t("privacyPolicyIntro"),
     keywords:
-      "integritetspolicy, privacy policy, GDPR, personuppgifter, data, Linköpings Universitet, LiU",
-    ogTitle: `LiU Tentor | ${t("privacyPolicyTitle")}`,
+      "integritetspolicy, privacy policy, GDPR, personuppgifter, data, KTH, KTH",
+    ogTitle: `KTH Tentor | ${t("privacyPolicyTitle")}`,
     ogDescription: t("privacyPolicyIntro"),
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${t("privacyPolicyTitle")}`,
+    twitterTitle: `KTH Tentor | ${t("privacyPolicyTitle")}`,
     twitterDescription: t("privacyPolicyIntro"),
     robots: "index, follow",
   });
@@ -135,11 +135,11 @@ const PrivacyPolicy: FC = () => {
             }
             items={[
               t("privacyPolicyGDPRItem1") ||
-                "Vi publicerar endast tentor som är offentligt tillgängliga.",
+              "Vi publicerar endast tentor som är offentligt tillgängliga.",
               t("privacyPolicyGDPRItem2") ||
-                "Examinatorers namn ingår endast om de finns med i den ursprungliga tentan.",
+              "Examinatorers namn ingår endast om de finns med i den ursprungliga tentan.",
               t("privacyPolicyGDPRItem3") ||
-                "Om du vill begära borttagning av en tenta eller ett namn, vänligen kontakta oss via e-post.",
+              "Om du vill begära borttagning av en tenta eller ett namn, vänligen kontakta oss via e-post.",
             ]}
           />
         </div>{" "}

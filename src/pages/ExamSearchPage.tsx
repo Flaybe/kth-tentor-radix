@@ -83,27 +83,24 @@ const ExamSearchPage: FC = () => {
   const closest = getClosestCourseCodes(courseCode || "", kurskodArray);
 
   const pageTitle = courseData
-    ? `${courseCode} - ${
-        language === "sv"
-          ? courseData.course_name_swe
-          : courseData.course_name_eng
-      } | Tentor`
+    ? `${courseCode} - ${language === "sv"
+      ? courseData.course_name_swe
+      : courseData.course_name_eng
+    } | Tentor`
     : `${courseCode} | Tentor`;
 
   const pageDescription = courseData
-    ? `Plugga ${formattedExams.length} tentor för ${courseCode} - ${
-        language === "sv"
-          ? courseData.course_name_swe
-          : courseData.course_name_eng
-      }`
+    ? `Plugga ${formattedExams.length} tentor för ${courseCode} - ${language === "sv"
+      ? courseData.course_name_swe
+      : courseData.course_name_eng
+    }`
     : `Search for exams in course ${courseCode}`;
 
   useMetadata({
     title: pageTitle,
     description: pageDescription,
-    keywords: `${courseCode}, tentor, tenta, Linköpings Universitet, LiU, liu, ${
-      courseData?.course_name_eng || ""
-    }`,
+    keywords: `${courseCode}, tentor, tenta, KTH, KTH, KTH, ${courseData?.course_name_eng || ""
+      }`,
     ogTitle: pageTitle,
     ogDescription: pageDescription,
     ogType: "website",
@@ -156,11 +153,10 @@ const ExamSearchPage: FC = () => {
             <div className="flex items-center justify-center min-h-[60vh] px-4">
               <ErrorCard
                 title={t("noExamsFound")}
-                message={`${t("noExamsFoundMessage")} "${courseCode}".${
-                  closest.length > 0
+                message={`${t("noExamsFoundMessage")} "${courseCode}".${closest.length > 0
                     ? ` ${t("didYouMean")} ${closest.join(", ")}?`
                     : ""
-                }`}
+                  }`}
                 showUploadButton={true}
               />
             </div>
