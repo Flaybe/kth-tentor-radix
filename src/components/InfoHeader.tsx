@@ -96,7 +96,7 @@ export default function InfoHeader() {
         <Link to="/" className="flex items-center gap-2">
           <LogoIcon className="w-8 h-8" />
           <span className="font-semibold text-xl font-logo text-foreground/80 tracking-tight hidden sm:inline-block">
-            LiU Tentor
+            KTH Tentor
           </span>
         </Link>
 
@@ -122,11 +122,10 @@ export default function InfoHeader() {
                   <DropdownMenuItem key={link.to} asChild>
                     <Link
                       to={link.to}
-                      className={`w-full cursor-pointer ${
-                        isCurrentPath(link.to)
+                      className={`w-full cursor-pointer ${isCurrentPath(link.to)
                           ? "bg-secondary text-secondary-foreground"
                           : ""
-                      }`}
+                        }`}
                     >
                       {link.label}
                     </Link>
@@ -150,7 +149,7 @@ export default function InfoHeader() {
               <SheetTitle className="flex items-center gap-2">
                 <LogoIcon className="w-8 h-8" />
                 <span className="font-semibold text-xl font-logo text-foreground/80 tracking-tight">
-                  LiU Tentor
+                  KTH Tentor
                 </span>
               </SheetTitle>
             </SheetHeader>

@@ -1,8 +1,5 @@
 import {
   GearSixIcon,
-  SunIcon,
-  MoonIcon,
-  MonitorIcon,
 } from "@phosphor-icons/react";
 import {
   Dialog,
@@ -12,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { FC, JSX, useEffect, useState } from "react";
+import { FC } from "react";
 import {
   Select,
   SelectContent,
@@ -22,9 +19,7 @@ import {
 } from "@/components/ui/select";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
-import { useTheme } from "@/context/ThemeContext";
 import useTranslation from "@/hooks/useTranslation";
 
 type ShortcutAction =
@@ -38,58 +33,21 @@ type ShortcutAction =
 
 const SettingsDialog: FC = () => {
   const { t } = useTranslation();
-  const { setTheme, theme } = useTheme();
   const { changeLanguage, languages, language } = useLanguage();
-  const [_, setSystemPrefersDark] = useState(false);
-
-  useEffect(() => {
-    const isDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    setSystemPrefersDark(isDarkMode);
-
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) =>
-      setSystemPrefersDark(e.matches);
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
-  const themeOptions: {
-    id: "light" | "dark" | "system";
-    label: string;
-    icon: JSX.Element;
-  }[] = [
-    {
-      id: "light",
-      label: "Light",
-      icon: <SunIcon weight="bold" className="w-5 h-5" />,
-    },
-    {
-      id: "dark",
-      label: "Dark",
-      icon: <MoonIcon weight="bold" className="w-5 h-5" />,
-    },
-    {
-      id: "system",
-      label: "System",
-      icon: <MonitorIcon weight="bold" className="w-5 h-5" />,
-    },
-  ];
 
   const shortcuts: Array<{
     action: ShortcutAction;
     key: string;
     category: string;
   }> = [
-    { action: "moveFacitRight", key: "→", category: "navigation" },
-    { action: "moveFacitLeft", key: "←", category: "navigation" },
-    { action: "toggleAIChat", key: "C", category: "navigation" },
-    { action: "zoomIn", key: "+", category: "zoom" },
-    { action: "zoomOut", key: "-", category: "zoom" },
-    { action: "rotateLeft", key: "R", category: "rotation" },
-    { action: "rotateRight", key: "L", category: "rotation" },
-  ];
+      { action: "moveFacitRight", key: "→", category: "navigation" },
+      { action: "moveFacitLeft", key: "←", category: "navigation" },
+      { action: "toggleAIChat", key: "C", category: "navigation" },
+      { action: "zoomIn", key: "+", category: "zoom" },
+      { action: "zoomOut", key: "-", category: "zoom" },
+      { action: "rotateLeft", key: "R", category: "rotation" },
+      { action: "rotateRight", key: "L", category: "rotation" },
+    ];
 
   const categoryTranslations = {
     search: { en: "Search", sv: "Sök" },
@@ -111,32 +69,6 @@ const SettingsDialog: FC = () => {
           <DialogTitle className="text-2xl">{t("settings")}</DialogTitle>
           <DialogDescription>{t("settingsDescription")}</DialogDescription>
         </DialogHeader>
-
-        {/* Theme Selector */}
-        <div className="space-y-3">
-          <h3 className="font-medium">{t("theme")}</h3>
-          <p className="text-sm text-muted-foreground">
-            {t("themeDescription")}
-          </p>
-          <div className="flex gap-2">
-            {themeOptions.map(({ id, label, icon }) => (
-              <div
-                key={id}
-                onClick={() => setTheme(id)}
-                className={cn(
-                  "flex-1 cursor-pointer rounded-md border border-border transition-all",
-                  "flex flex-col items-center justify-center gap-2 py-4 hover:bg-primary/5 hover:border-primary",
-                  theme === id
-                    ? "bg-primary/10 border-primary hover:bg-primary/10"
-                    : "bg-card"
-                )}
-              >
-                {icon}
-                <span className="text-sm font-medium">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Language Selector */}
         <div className="space-y-4">
@@ -170,7 +102,7 @@ const SettingsDialog: FC = () => {
                   <h4 className="text-sm font-medium text-muted-foreground first-letter:uppercase">
                     {
                       categoryTranslations[
-                        category as keyof typeof categoryTranslations
+                      category as keyof typeof categoryTranslations
                       ][language as "en" | "sv"]
                     }
                   </h4>

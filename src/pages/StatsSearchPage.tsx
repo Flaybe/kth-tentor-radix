@@ -124,27 +124,24 @@ export default function StatsSearchPage() {
   );
 
   const pageTitle = courseData
-    ? `Statistik för ${courseCode} - ${
-        language === "sv"
-          ? courseData.course_name_swe
-          : courseData.course_name_eng
-      }`
+    ? `Statistik för ${courseCode} - ${language === "sv"
+      ? courseData.course_name_swe
+      : courseData.course_name_eng
+    }`
     : `${courseCode}`;
 
   const pageDescription = courseData
-    ? `Statistik för ${courseCode} - ${
-        language === "sv"
-          ? courseData.course_name_swe
-          : courseData.course_name_eng
-      }`
+    ? `Statistik för ${courseCode} - ${language === "sv"
+      ? courseData.course_name_swe
+      : courseData.course_name_eng
+    }`
     : `Search for exams in course ${courseCode}`;
 
   useMetadata({
     title: pageTitle,
     description: pageDescription,
-    keywords: `${courseCode}, tentor, tenta, Linköpings Universitet, LiU, liu, ${
-      courseData?.course_name_eng || ""
-    }`,
+    keywords: `${courseCode}, tentor, tenta, KTH, KTH, KTH, ${courseData?.course_name_eng || ""
+      }`,
     ogTitle: pageTitle,
     ogDescription: pageDescription,
     ogType: "website",
@@ -200,14 +197,13 @@ export default function StatsSearchPage() {
           {/* Course title */}
           <div className="flex flex-row items-center justify-between w-full">
             <h2
-              className={`font-semibold text-foreground ${
-                ((language === "sv"
+              className={`font-semibold text-foreground ${((language === "sv"
                   ? courseData?.course_name_swe
                   : courseData?.course_name_eng
                 )?.length ?? 0) > 40
                   ? "text-2xl"
                   : "text-4xl"
-              }`}
+                }`}
             >
               {language === "sv"
                 ? courseData?.course_name_swe
@@ -340,8 +336,7 @@ export default function StatsSearchPage() {
                   <Tooltip
                     formatter={(v: any, _n: any, p: any) => [
                       nf.format(v as number),
-                      `${language === "sv" ? "Betyg " : "Grade "}${
-                        p?.payload?.label ?? ""
+                      `${language === "sv" ? "Betyg " : "Grade "}${p?.payload?.label ?? ""
                       }`,
                     ]}
                     cursor={{ fill: "transparent" }}

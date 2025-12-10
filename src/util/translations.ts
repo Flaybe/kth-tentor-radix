@@ -317,22 +317,22 @@ interface SponsorTranslations {
 // Main translations interface combining all sections
 export interface Translations
   extends CommonTranslations,
-    HomePageTranslations,
-    ExamTranslations,
-    PDFControlTranslations,
-    CourseTranslations,
-    UserProgressTranslations,
-    FeedbackTranslations,
-    UploadTranslations,
-    UITranslations,
-    KeyboardTranslations,
-    TimeTranslations,
-    CookieTranslations,
-    PrivacyTranslations,
-    AuthTranslations,
-    StatisticsTranslations,
-    SponsorTranslations,
-    MiscTranslations {}
+  HomePageTranslations,
+  ExamTranslations,
+  PDFControlTranslations,
+  CourseTranslations,
+  UserProgressTranslations,
+  FeedbackTranslations,
+  UploadTranslations,
+  UITranslations,
+  KeyboardTranslations,
+  TimeTranslations,
+  CookieTranslations,
+  PrivacyTranslations,
+  AuthTranslations,
+  StatisticsTranslations,
+  SponsorTranslations,
+  MiscTranslations { }
 
 const translations: Record<Language, Translations> = {
   sv: {
@@ -360,9 +360,9 @@ const translations: Record<Language, Translations> = {
     closeDialog: "Stäng",
 
     // Home Page
-    homeTitle: "LiU Tentor",
+    homeTitle: "KTH Tentor",
     homeDescription:
-      "Äntligen kan du hitta tentor från Linköpings universitet på ett och samma ställe... Främst TekFak",
+      "Äntligen kan du hitta tentor från KTH på ett och samma ställe... Främst TekFak",
     searchPlaceholder: "Sök efter",
     courseCodePlaceholder: "Kurskod",
     popularSearches: "Populära sökningar",
@@ -470,15 +470,15 @@ const translations: Record<Language, Translations> = {
     messageLegend: "Meddelande",
     messagePlaceholder: "Meddelande",
     messageDescription:
-      "Berätta vad du tycker om LiU Tentor! Vi uppskattar om du är så detaljerad som möjligt.",
+      "Berätta vad du tycker om KTH Tentor! Vi uppskattar om du är så detaljerad som möjligt.",
     partOfWebsiteLegend: "Del av hemsidan",
     partOfWebsitePlaceholder: "Vilken del av hemsidan?",
-    emailPlaceholder: "LiU Mail",
-    exampleEmail: "t.ex. liuid123@student.liu.se",
+    emailPlaceholder: "KTH Mail",
+    exampleEmail: "t.ex. kthid@student.kth.se",
     requiredField: "Obligatoriskt",
     requiredFieldMessage: "Obligatoriskt fält",
     weNeedYourHelp: "Vi behöver din hjälp!",
-    makeLiuTentorBetter: "Hjälp oss göra LiU Tentor bättre",
+    makeLiuTentorBetter: "Hjälp oss göra KTH Tentor bättre",
 
     // Upload
     uploadTitle: "Ladda upp tenta eller facit",
@@ -507,9 +507,9 @@ const translations: Record<Language, Translations> = {
     standard: "Standard",
     large: "Stor",
     font: "Font",
-    fontDescription: "Välj vilken font du vill använda på LiU Tentor",
+    fontDescription: "Välj vilken font du vill använda på KTH Tentor",
     theme: "Tema",
-    themeDescription: "Välj vilket tema du vill använda på LiU Tentor",
+    themeDescription: "Välj vilket tema du vill använda på KTH Tentor",
     settingsDescription: "Anpassa dina inställningar och visa kortkommandon",
     settingsTheme: "Tema",
     settingsLanguage: "Språk",
@@ -609,8 +609,8 @@ const translations: Record<Language, Translations> = {
     login: "Logga in",
     create_account: "Skapa konto",
     welcome_back: "Välkommen tillbaka",
-    login_with_liu_mail: "Logga in med LiU-mail",
-    register_with_liu_mail: "Registrera med LiU-mail",
+    login_with_liu_mail: "Logga in med KTH-mail",
+    register_with_liu_mail: "Registrera med KTH-mail",
 
     // Statistics
     statistics: "Statistik",
@@ -628,7 +628,7 @@ const translations: Record<Language, Translations> = {
     aiTitle: "Vad behöver du hjälp med?",
     aiDescription:
       "Få frågor besvarade, förklarade och diskuterade av chatten.",
-    aiChatTitle: "LiU Tentor AI",
+    aiChatTitle: "KTH Tentor AI",
     aiChatEmptyTitle: "Ställ en fråga om tentan!",
     aiChatEmptyDescription:
       "Jag kan hjälpa dig att förstå frågor och koncept från denna tenta.",
@@ -636,7 +636,7 @@ const translations: Record<Language, Translations> = {
     aiChatPoweredBy: "AI kan göra misstag, kontrollera alltid svar.",
     aiChatSend: "Skicka",
     aiChatThinking: "Tänker",
-    aiIntroTitle: "LiU Tentor x ChatGPT",
+    aiIntroTitle: "KTH Tentor x ChatGPT",
     aiIntroSubtitle: "Din personliga studieassistent",
     aiIntroDescription:
       "Vi har lagt in chatten som vi alla älskar som hjälper dig att förstå och lära dig från tentor. Ställ frågor, få förklaringar och förbättra din förståelse.",
@@ -694,9 +694,9 @@ const translations: Record<Language, Translations> = {
     closeDialog: "Close",
 
     // Home Page
-    homeTitle: "LiU Exams",
+    homeTitle: "KTH Exams",
     homeDescription:
-      "Finally, you can find exams from Linköping University all in one place... Mostly TekFak",
+      "Finally, you can find exams from KTH all in one place... Mostly TekFak",
     searchPlaceholder: "Search for",
     courseCodePlaceholder: "Course Code",
     popularSearches: "Popular Searches",
@@ -805,15 +805,15 @@ const translations: Record<Language, Translations> = {
     messageLegend: "Message",
     messagePlaceholder: "Message",
     messageDescription:
-      "Tell us what you think about LiU Exams! We appreciate as much detail as possible.",
+      "Tell us what you think about KTH Exams! We appreciate as much detail as possible.",
     partOfWebsiteLegend: "Part of the website",
     partOfWebsitePlaceholder: "Which part of the website?",
-    emailPlaceholder: "LiU Mail",
-    exampleEmail: "e.g. liuid123@student.liu.se",
+    emailPlaceholder: "KTH Mail",
+    exampleEmail: "e.g. kthid@student.kth.se",
     requiredField: "Required",
     requiredFieldMessage: "Required field",
     weNeedYourHelp: "We need your help!",
-    makeLiuTentorBetter: "Help us make LiU Exams better",
+    makeLiuTentorBetter: "Help us make KTH Exams better",
 
     // Upload
     uploadTitle: "Upload exam or solution",
@@ -843,9 +843,9 @@ const translations: Record<Language, Translations> = {
     standard: "Standard",
     large: "Large",
     font: "Font",
-    fontDescription: "Choose which font you want to use on LiU Exams",
+    fontDescription: "Choose which font you want to use on KTH Exams",
     theme: "Theme",
-    themeDescription: "Choose which theme you want to use on LiU Exams",
+    themeDescription: "Choose which theme you want to use on KTH Exams",
     settingsDescription:
       "Customize your preferences and view keyboard shortcuts",
     settingsTheme: "Theme",
@@ -944,8 +944,8 @@ const translations: Record<Language, Translations> = {
     login: "Login",
     create_account: "Create account",
     welcome_back: "Welcome back",
-    login_with_liu_mail: "Login with LiU mail",
-    register_with_liu_mail: "Register with LiU mail",
+    login_with_liu_mail: "Login with KTH mail",
+    register_with_liu_mail: "Register with KTH mail",
 
     // Statistics
     statistics: "Statistics",
@@ -963,7 +963,7 @@ const translations: Record<Language, Translations> = {
     aiTitle: "What do you need help with?",
     aiDescription:
       "Get questions answered, explained, and discussed by the chat.",
-    aiChatTitle: "LiU Tentor AI",
+    aiChatTitle: "KTH Tentor AI",
     aiChatEmptyTitle: "Ask a question about the exam!",
     aiChatEmptyDescription:
       "I can help you understand questions and concepts from this exam.",
@@ -971,7 +971,7 @@ const translations: Record<Language, Translations> = {
     aiChatPoweredBy: "AI can make mistakes, always check responses.",
     aiChatSend: "Send",
     aiChatThinking: "Thinking",
-    aiIntroTitle: "LiU Tentor x ChatGPT",
+    aiIntroTitle: "KTH Tentor x ChatGPT",
     aiIntroSubtitle: "Your personal study assistant",
     aiIntroDescription:
       "We've added chat as we all love to help you understand and learn from exams. Ask questions, get explanations, and improve your understanding.",

@@ -45,8 +45,8 @@ const Footer: FC = () => {
             </div>
             <p className="text-sm text-muted-foreground">
               {language === "sv"
-                ? "Din resurs för tentamensarkiv vid Linköpings Universitet."
-                : "Your resource for the Linköping University exam archive."}
+                ? "Din resurs för tentamensarkiv vid KTH."
+                : "Your resource for the KTH exam archive."}
             </p>
           </div>
 

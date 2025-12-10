@@ -13,27 +13,26 @@ const FAQPage = () => {
   const { language } = useLanguage();
 
   useMetadata({
-    title: `LiU Tentor | ${language === "sv" ? "Vanliga frågor" : "FAQ"}`,
+    title: `KTH Tentor | ${language === "sv" ? "Vanliga frågor" : "FAQ"}`,
     description:
       language === "sv"
-        ? "Hitta svar på de vanligaste frågorna om LiU Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
-        : "Find answers to the most common questions about LiU Tentor, how to use the service and where to find old exams and solutions.",
+        ? "Hitta svar på de vanligaste frågorna om KTH Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
+        : "Find answers to the most common questions about KTH Tentor, how to use the service and where to find old exams and solutions.",
     keywords:
-      "faq, vanliga frågor, frequently asked questions, hjälp, support, Linköpings Universitet, LiU, tentor",
-    ogTitle: `LiU Tentor | ${language === "sv" ? "Vanliga frågor" : "FAQ"}`,
+      "faq, vanliga frågor, frequently asked questions, hjälp, support, KTH, KTH, tentor",
+    ogTitle: `KTH Tentor | ${language === "sv" ? "Vanliga frågor" : "FAQ"}`,
     ogDescription:
       language === "sv"
-        ? "Hitta svar på de vanligaste frågorna om LiU Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
-        : "Find answers to the most common questions about LiU Tentor, how to use the service and where to find old exams and solutions.",
+        ? "Hitta svar på de vanligaste frågorna om KTH Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
+        : "Find answers to the most common questions about KTH Tentor, how to use the service and where to find old exams and solutions.",
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${
-      language === "sv" ? "Vanliga frågor" : "FAQ"
-    }`,
+    twitterTitle: `KTH Tentor | ${language === "sv" ? "Vanliga frågor" : "FAQ"
+      }`,
     twitterDescription:
       language === "sv"
-        ? "Hitta svar på de vanligaste frågorna om LiU Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
-        : "Find answers to the most common questions about LiU Tentor, how to use the service and where to find old exams and solutions.",
+        ? "Hitta svar på de vanligaste frågorna om KTH Tentor, hur du använder tjänsten och var du hittar gamla tentor och facit."
+        : "Find answers to the most common questions about KTH Tentor, how to use the service and where to find old exams and solutions.",
     robots: "index, follow",
   });
 
@@ -54,13 +53,13 @@ const FAQPage = () => {
           <AccordionItem value="1">
             <AccordionTrigger>
               {language === "sv"
-                ? "Är det här en officiell LiU-sida?"
-                : "Is this an official LiU site?"}
+                ? "Är det här en officiell KTH-sida?"
+                : "Is this an official KTH site?"}
             </AccordionTrigger>
             <AccordionContent>
               {language === "sv"
-                ? "Nej, detta är ett studentdrivet projekt och är inte kopplat till Linköpings universitet."
-                : "No, this is a student-driven project and is not affiliated with Linköping University."}
+                ? "Nej, detta är ett studentdrivet projekt och är inte kopplat till KTH."
+                : "No, this is a student-driven project and is not affiliated with KTH."}
             </AccordionContent>
           </AccordionItem>
 

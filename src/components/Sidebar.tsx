@@ -72,7 +72,7 @@ export default function Sidebar() {
       >
         <LogoIcon className="w-12 h-12" />
         <h1 className="font-semibold text-2xl font-logo text-foreground/80 tracking-tight">
-          LiU Tentor
+          KTH Tentor
         </h1>
       </Link>
       <div className="w-full px-4">

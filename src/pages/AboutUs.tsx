@@ -7,25 +7,25 @@ const OmOss: FC = () => {
   const { language } = useLanguage();
 
   useMetadata({
-    title: `LiU Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
+    title: `KTH Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
     description:
       language === "sv"
-        ? "Lär känna teamet bakom LiU Tentor och vår mission att göra tentorstudering enklare för alla studenter vid Linköpings universitet."
-        : "Meet the team behind LiU Tentor and our mission to make exam preparation easier for all students at Linköping University.",
+        ? "Lär känna teamet bakom KTH Tentor och vår mission att göra tentorstudering enklare för alla studenter vid KTH."
+        : "Meet the team behind KTH Tentor and our mission to make exam preparation easier for all students at KTH.",
     keywords:
-      "om oss, about us, team, Linköpings Universitet, LiU, studenter, mission",
-    ogTitle: `LiU Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
+      "om oss, about us, team, KTH, KTH, studenter, mission",
+    ogTitle: `KTH Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
     ogDescription:
       language === "sv"
-        ? "Lär känna teamet bakom LiU Tentor och vår mission att göra tentorstudering enklare för alla studenter vid Linköpings universitet."
-        : "Meet the team behind LiU Tentor and our mission to make exam preparation easier for all students at Linköping University.",
+        ? "Lär känna teamet bakom KTH Tentor och vår mission att göra tentorstudering enklare för alla studenter vid KTH."
+        : "Meet the team behind KTH Tentor and our mission to make exam preparation easier for all students at KTH.",
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
+    twitterTitle: `KTH Tentor | ${language === "sv" ? "Om oss" : "About Us"}`,
     twitterDescription:
       language === "sv"
-        ? "Lär känna teamet bakom LiU Tentor och vår mission att göra tentorstudering enklare för alla studenter vid Linköpings universitet."
-        : "Meet the team behind LiU Tentor and our mission to make exam preparation easier for all students at Linköping University.",
+        ? "Lär känna teamet bakom KTH Tentor och vår mission att göra tentorstudering enklare för alla studenter vid KTH."
+        : "Meet the team behind KTH Tentor and our mission to make exam preparation easier for all students at KTH.",
     robots: "index, follow",
   });
 
@@ -42,8 +42,8 @@ const OmOss: FC = () => {
         {language === "sv" ? (
           <>
             <p>
-              LiU Tentor är ett ideellt initiativ som startades av några
-              studenter vid Linköpings universitet som tröttnade på att klicka
+              KTH Tentor är ett ideellt initiativ som startades av några
+              studenter vid KTH som tröttnade på att klicka
               runt i evigheter för att hitta rätt tenta. Det började som ett
               sidoprojekt en sen kväll under tentaveckan, och har sedan dess
               vuxit till något större än vi trodde.
@@ -56,7 +56,7 @@ const OmOss: FC = () => {
               finns någonstans på kurshemsidan.
             </p>
             <p>
-              Vi bygger LiU Tentor för att vi själva använder det - och
+              Vi bygger KTH Tentor för att vi själva använder det - och
               förbättrar det ständigt utifrån våra behov, era förslag och små
               idéer som dyker upp mitt i natten. Det är ett passion project, men
               också något vi verkligen tror gör studentlivet lite enklare.
@@ -69,8 +69,8 @@ const OmOss: FC = () => {
         ) : (
           <>
             <p>
-              LiU Tentor is a non-profit project started by students at
-              Linköping University who were tired of clicking around endlessly
+              KTH Tentor is a non-profit project started by students at
+              KTH who were tired of clicking around endlessly
               to find the right exam. It began as a side project late one exam
               week and has since grown into something bigger than we imagined.
             </p>
@@ -82,7 +82,7 @@ const OmOss: FC = () => {
               course site.
             </p>
             <p>
-              We're building LiU Tentor because we use it ourselves - and we're
+              We're building KTH Tentor because we use it ourselves - and we're
               constantly improving it based on our needs, your suggestions, and
               random 2 a.m. ideas. It's a passion project, but also something we
               truly believe makes student life a bit easier.

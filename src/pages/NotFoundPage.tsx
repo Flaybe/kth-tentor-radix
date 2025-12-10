@@ -10,31 +10,28 @@ const NotFoundPage: React.FC = () => {
   const { t } = useTranslation();
 
   useMetadata({
-    title: `LiU Tentor | 404 - ${
-      language === "sv" ? "Sidan hittades inte" : "Page Not Found"
-    }`,
+    title: `KTH Tentor | 404 - ${language === "sv" ? "Sidan hittades inte" : "Page Not Found"
+      }`,
     description:
       language === "sv"
-        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda LiU Tentor."
-        : "This page could not be found. Return to the homepage to continue using LiU Tentor.",
+        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda KTH Tentor."
+        : "This page could not be found. Return to the homepage to continue using KTH Tentor.",
     keywords:
-      "404, page not found, sidan hittades inte, fel, error, Linköpings Universitet, LiU",
-    ogTitle: `LiU Tentor | 404 - ${
-      language === "sv" ? "Sidan hittades inte" : "Page Not Found"
-    }`,
+      "404, page not found, sidan hittades inte, fel, error, KTH, KTH",
+    ogTitle: `KTH Tentor | 404 - ${language === "sv" ? "Sidan hittades inte" : "Page Not Found"
+      }`,
     ogDescription:
       language === "sv"
-        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda LiU Tentor."
-        : "This page could not be found. Return to the homepage to continue using LiU Tentor.",
+        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda KTH Tentor."
+        : "This page could not be found. Return to the homepage to continue using KTH Tentor.",
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | 404 - ${
-      language === "sv" ? "Sidan hittades inte" : "Page Not Found"
-    }`,
+    twitterTitle: `KTH Tentor | 404 - ${language === "sv" ? "Sidan hittades inte" : "Page Not Found"
+      }`,
     twitterDescription:
       language === "sv"
-        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda LiU Tentor."
-        : "This page could not be found. Return to the homepage to continue using LiU Tentor.",
+        ? "Den här sidan kunde inte hittas. Gå tillbaka till startsidan för att fortsätta använda KTH Tentor."
+        : "This page could not be found. Return to the homepage to continue using KTH Tentor.",
     robots: "noindex, nofollow",
   });
 

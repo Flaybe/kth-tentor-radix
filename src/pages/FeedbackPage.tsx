@@ -27,13 +27,13 @@ const formSchema = z.object({
     .min(10, { message: "Meddelande måste innehålla minst 10 symboler" })
     .max(500),
   name: z.string().optional(),
-  liu_mail: z
+  KTH_mail: z
     .string()
     .email({ message: "Ogiltig e-postadress" })
-    .regex(/^[a-z]{4,6}[0-9]{3}@student\.liu\.se$/, {
-      message: "Endast LiU studentmail tillåten",
+    .regex(/^[a-z]{4,6}[0-9]{3}@student\.KTH\.se$/, {
+      message: "Endast KTH studentmail tillåten",
     })
-    .min(1, { message: "LiU email är obligatoriskt" }),
+    .min(1, { message: "KTH email är obligatoriskt" }),
 });
 
 const FeedbackPage: FC = () => {
@@ -42,15 +42,15 @@ const FeedbackPage: FC = () => {
   const { t } = useTranslation();
 
   useMetadata({
-    title: `LiU Tentor | ${t("feedbackTitle")}`,
+    title: `KTH Tentor | ${t("feedbackTitle")}`,
     description: t("feedbackDescription"),
     keywords:
-      "feedback, återkoppling, kontakt, support, Linköpings Universitet, LiU, hjälp",
-    ogTitle: `LiU Tentor | ${t("feedbackTitle")}`,
+      "feedback, återkoppling, kontakt, support, KTH, KTH, hjälp",
+    ogTitle: `KTH Tentor | ${t("feedbackTitle")}`,
     ogDescription: t("feedbackDescription"),
     ogType: "website",
     twitterCard: "summary",
-    twitterTitle: `LiU Tentor | ${t("feedbackTitle")}`,
+    twitterTitle: `KTH Tentor | ${t("feedbackTitle")}`,
     twitterDescription: t("feedbackDescription"),
     robots: "index, follow",
   });
@@ -61,7 +61,7 @@ const FeedbackPage: FC = () => {
       message: "",
       name: "",
       partOfWebsite: "",
-      liu_mail: "",
+      KTH_mail: "",
     },
   });
 
@@ -72,7 +72,7 @@ const FeedbackPage: FC = () => {
           name: values.name,
           message: values.message,
           part_of_website: values.partOfWebsite,
-          liu_mail: values.liu_mail,
+          KTH_mail: values.KTH_mail,
         },
       ]);
 
@@ -188,16 +188,16 @@ const FeedbackPage: FC = () => {
 
                 <FormField
                   control={form.control}
-                  name="liu_mail"
+                  name="KTH_mail"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel isRequired>LiU Mail</FormLabel>
+                      <FormLabel isRequired>KTH Mail</FormLabel>
                       <FormControl>
                         <Input placeholder={t("emailPlaceholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                       <p className="text-xs text-muted-foreground mt-1">
-                        Format: liuid123@student.liu.se
+                        Format: KTHid123@student.KTH.se
                       </p>
                     </FormItem>
                   )}

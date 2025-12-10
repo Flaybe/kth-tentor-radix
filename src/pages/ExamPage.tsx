@@ -62,24 +62,22 @@ const ExamPage: FC = () => {
 
   const pageTitle =
     examDetail && courseData
-      ? `${courseCode} - Tenta ${formatExamDate(examDetail.exam.exam_date)} | ${
-          courseData.course_name_swe
-        }`
+      ? `${courseCode} - Tenta ${formatExamDate(examDetail.exam.exam_date)} | ${courseData.course_name_swe
+      }`
       : `${courseCode} - Tenta ${examId}`;
 
   const pageDescription =
     examDetail && courseData
       ? `Se tenta för ${courseCode} från ${formatExamDate(
-          examDetail.exam.exam_date
-        )} - ${courseData.course_name_eng}`
+        examDetail.exam.exam_date
+      )} - ${courseData.course_name_eng}`
       : `Tenta för ${courseCode}`;
 
   useMetadata({
     title: pageTitle,
     description: pageDescription,
-    keywords: `${courseCode}, tenta, Linköpings Universitet, kurs, LiU, liu, Liu ${
-      courseData?.course_name_eng || ""
-    }`,
+    keywords: `${courseCode}, tenta, KTH, kurs, KTH, KTH, KTH ${courseData?.course_name_eng || ""
+      }`,
     ogTitle: pageTitle,
     ogDescription: pageDescription,
     ogType: "article",
